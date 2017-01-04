@@ -1,6 +1,8 @@
 var request = require('request'),
     app = require('express')();
 
+app.set("port", (process.env.PORT || 5000));
+
 app.options('/rest/2/vendors/:vendorid/reporting/sales/transactions', function(req, res) {
 	res.setHeader("Access-Control-Allow-Origin", "*");
 	res.setHeader("Access-Control-Allow-Headers", "authorization");
@@ -22,4 +24,4 @@ app.get('/rest/2/vendors/:vendorid/reporting/sales/transactions', function(req, 
 	request(opts).pipe(res);
 });
 
-app.listen(8001);
+app.listen(app.get("port"));
