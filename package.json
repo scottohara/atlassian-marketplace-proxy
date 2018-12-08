@@ -10,7 +10,7 @@
   "author": "Scott O'Hara <scott@oharagroup.net>",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0",
-    "request": "^2.79.0"
+    "express": "^4.16.0",
+    "request": "^2.84.0"
   }
 }
